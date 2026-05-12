@@ -218,6 +218,17 @@
     <ol class="paper-list">
 
       <li class="paper-item">
+        <div class="ptitle">Learning Ising Models from Evolutions</div>
+        <div class="authors">with Ankur Moitra and Elchanan Mossel</div>
+        <div class="venue">To appear at COLT 2026.</div>
+        <div class="paper-links">
+          <a onclick="toggleAbstract('gm25b')">Abstract</a>
+          <a href="https://arxiv.org/abs/2507.15173" target="_blank">PDF</a>
+        </div>
+        <div class="abstract-block" id="abs-gm25b">We study the problem of learning the structure and parameters of the Ising model, a fundamental model of high-dimensional data, when observing the evolution of an associated Markov chain. A recent line of work has studied the natural problem of learning when observing an evolution of the well-known Glauber dynamics [Bresler, Gamarnik, Shah, IEEE Trans. Inf. Theory 2018, Gaitonde, Mossel STOC 2024], which provides an arguably more realistic generative model than the classical i.i.d. setting. However, this prior work crucially assumes that all site update attempts are observed, <i>even when this attempt does not change the configuration</i>: this strong observation model is seemingly essential for these approaches. While perhaps possible in restrictive contexts, this precludes applicability to most realistic settings where we can observe <i>only</i> the stochastic evolution itself, a minimal and natural assumption for any process we might hope to learn from. However, designing algorithms that succeed in this more realistic setting has remained an open problem [Bresler, Gamarnik, Shah, IEEE Trans. Inf. Theory 2018, Gaitonde, Moitra, Mossel, STOC 2025].<br><br>In this work, we give the first algorithms that efficiently learn the Ising model in this much more natural observation model that only observes when the configuration changes. For Ising models with maximum degree $d$, our algorithm recovers the underlying dependency graph in time $\mathsf{poly}(d)\cdot n^2\log n$ and then the actual parameters in additional $\widetilde{O}(2^d n)$ time, which qualitatively matches the state-of-the-art even in the i.i.d. setting in a much weaker observation model. Our analysis holds more generally for a broader class of reversible, single-site Markov chains that also includes the popular Metropolis chain by leveraging more robust properties of reversible Markov chains.</div>
+      </li>
+
+      <li class="paper-item">
         <div class="ptitle">Comparison Theorems for the Mixing Times of Systematic and Random Scan Dynamics</div>
         <div class="authors">with Elchanan Mossel</div>
         <div class="venue">SODA 2026.</div>
@@ -237,17 +248,6 @@
           <a href="https://arxiv.org/abs/2409.05284" target="_blank">PDF</a>
         </div>
         <div class="abstract-block" id="abs-gmm24">We consider the problem of learning graphical models, also known as Markov random fields (MRFs) from <i>temporally</i> correlated samples. As in many traditional statistical settings, fundamental results in the area all assume independent samples from the distribution. However, these samples generally will not directly correspond to more realistic observations from nature, which instead <i>evolve</i> according to some stochastic process. From the computational lens, even generating a single sample from the true MRF distribution is intractable unless $\mathsf{NP}=\mathsf{RP}$, and moreover, any algorithm to learn from i.i.d. samples requires prohibitive runtime due to hardness reductions to the <i>parity with noise problem</i>. These computational barriers for sampling and learning from the i.i.d. setting severely lessen the utility of these breakthrough results for this important task; however, dropping this assumption typically only introduces further algorithmic and statistical complexities.<br><br>In this work, we surprisingly demonstrate that the direct trajectory data from a natural evolution of the MRF overcomes the fundamental computational lower bounds to efficient learning. In particular, we show that given a trajectory with $\widetilde{O}_k(n)$ site updates of an order $k$ MRF from the Glauber dynamics, a well-studied, natural stochastic process on graphical models, there is an algorithm that recovers the graph and the parameters in $\widetilde{O}_k(n^2)$ time. By contrast, all prior algorithms for learning order $k$ MRFs inherently suffer from $n^{\Theta(k)}$ runtime even in sparse instances due to the reductions to sparse parity with noise. Our results thus surprisingly show that this more realistic, but intuitively less tractable, model for MRFs actually leads to efficiency far beyond what is known and believed to be true in the traditional i.i.d. case.</div>
-      </li>
-
-      <li class="paper-item">
-        <div class="ptitle">Learning Ising Models from Evolutions</div>
-        <div class="authors">with Ankur Moitra and Elchanan Mossel</div>
-        <div class="venue">COLT 2026.</div>
-        <div class="paper-links">
-          <a onclick="toggleAbstract('gm25b')">Abstract</a>
-          <a href="https://arxiv.org/abs/2507.15173" target="_blank">PDF</a>
-        </div>
-        <div class="abstract-block" id="abs-gm25b">We study the problem of learning the structure and parameters of the Ising model, a fundamental model of high-dimensional data, when observing the evolution of an associated Markov chain. A recent line of work has studied the natural problem of learning when observing an evolution of the well-known Glauber dynamics [Bresler, Gamarnik, Shah, IEEE Trans. Inf. Theory 2018, Gaitonde, Mossel STOC 2024], which provides an arguably more realistic generative model than the classical i.i.d. setting. However, this prior work crucially assumes that all site update attempts are observed, <i>even when this attempt does not change the configuration</i>: this strong observation model is seemingly essential for these approaches. While perhaps possible in restrictive contexts, this precludes applicability to most realistic settings where we can observe <i>only</i> the stochastic evolution itself, a minimal and natural assumption for any process we might hope to learn from. However, designing algorithms that succeed in this more realistic setting has remained an open problem [Bresler, Gamarnik, Shah, IEEE Trans. Inf. Theory 2018, Gaitonde, Moitra, Mossel, STOC 2025].<br><br>In this work, we give the first algorithms that efficiently learn the Ising model in this much more natural observation model that only observes when the configuration changes. For Ising models with maximum degree $d$, our algorithm recovers the underlying dependency graph in time $\mathsf{poly}(d)\cdot n^2\log n$ and then the actual parameters in additional $\widetilde{O}(2^d n)$ time, which qualitatively matches the state-of-the-art even in the i.i.d. setting in a much weaker observation model. Our analysis holds more generally for a broader class of reversible, single-site Markov chains that also includes the popular Metropolis chain by leveraging more robust properties of reversible Markov chains.</div>
       </li>
 
       <li class="paper-item">
